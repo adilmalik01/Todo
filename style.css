@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mainDiv {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #E3E9FF;
+    justify-content: center;
+    align-items: center;
+}
+
+.formDiv {
+    width: 700px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.formDiv form {
+    width: 60%;
+    border-radius: 20px;
+    min-height: 100%;
+}
+
+.head {
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    padding: 0 5px;
+    align-items: center;
+    gap: 10px;
+    background-color: #b891f0;
+}
+
+.head input {
+    width: 70%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    padding: 0 10px;
+    font-size: 18px;
+    border: 1px solid black;
+}
+
+
+
+.head button {
+    width: 20%;
+    height: 34px;
+    border-radius: 20px;
+    border: none;
+    height: 40px;
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid black;
+
+}
+
+
+.body {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    overflow-y: auto;
+    padding: 10px 0;
+    background-color: white;
+}
+
+
+
+.body::-webkit-scrollbar {
+    width: 7px;
+}
+
+.body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.body::-webkit-scrollbar-thumb {
+    background: #cfb4f7;
+    border-radius: 6px;
+}
+
+.body::-webkit-scrollbar-thumb:hover {
+    background: #b891f0;
+}
+
+.todo {
+    width: 80%;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+    border-bottom: 1px solid rgb(212, 208, 208);
+    padding: 0 5px;
+}
+
+.todo input {
+    border: 1px solid #AC80EA;
+
+}
+
+.centerSide {
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+.centerSide p {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.rightSide i {
+    font-size: 18px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+
+
+.completed {
+    text-decoration: line-through;
+}
+
+
+.todo input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #AC80EA;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+}
+
+.todo input[type="checkbox"]:checked::before {
+    content: "✓";
+    color: white;
+    position: absolute;
+    left: 4px;
+    font-size: 12px;
+}
+
+.todo input[type="checkbox"]:checked {
+    background-color: #AC80EA;
+    border-color: white;
+}
+
+
+
+
+@media (max-width: 640px) {
+    .formDiv form {
+        width: 80%;
+    }
+}
+
+
+@media (max-width: 420px) {
+
+    .formDiv form {
+        width: 95%;
+    }
+}
